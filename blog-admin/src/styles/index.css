@@ -1,0 +1,484 @@
+body{
+    background-color: rgb(27, 27, 27);
+    font-family: Consolas, monospace;
+}
+
+#app-container{
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 70px;
+    border-radius: 10px 10px 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    background-color: rgb(42, 212, 255);
+    width: 100%;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px 10px 0px 0px;
+
+    flex-shrink: 0;
+}
+
+#content{
+    background-color: white;
+    width: 100%;
+    color: black;
+    border-radius: 0px 0px 10px 10px;
+
+    flex: 1;
+}
+
+.title{
+    text-align: center;
+}
+
+.secondary-text{
+    color: rgb(32, 155, 185);
+}
+
+.grey-text{
+    color: grey;
+}
+
+.input-labels{
+    font-weight: bold;
+}
+
+.input-label-container{
+    margin: 5px;
+    margin-left: 7px;
+    background-color: white;
+    width: fit-content;
+    position: relative;
+    margin-bottom: -7px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 5px;
+}
+
+.input{
+    padding: 7px;
+    font-family: Consolas, monospace;
+}
+
+.btn-class{
+    font-family: Consolas, monospace;
+    color: white;
+    padding: 5px;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.primary-button{
+    background-color: rgb(36, 205, 247);
+    border: 1px solid rgb(36, 205, 247);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.primary-button:hover{
+    color: rgb(36, 205, 247);
+    background-color:white;
+}
+
+.secondary-button{
+    background-color: indianred;
+    border: 1px solid indianred;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary-button:hover{
+    background-color: white;
+    color: indianred
+}
+
+.btn-footer{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login-container{
+    width: 500px;
+    height: 350px;
+}
+
+.sign-in-container{
+    width: 500px;
+    height: 650px;
+}
+
+.login-input{
+    width: 380px;
+}
+
+#login-content{
+    width: 400px;
+    margin: 0 auto;
+}
+
+#login-submit-button, #sign-up-button, #submit-content-button{
+    font-size: 20px;
+    width: 150px;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #24cdf7;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#login-submit-button:hover, #sign-up-button:hover, #submit-content-button:hover{
+    color: rgb(36, 205, 247);
+    background-color: white;
+}
+
+#login-submit-button-container, #sign-up-button-container, #submit-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.blog-container{
+    width: 750px;
+    height: fit-content;
+}
+
+#blog-content{
+    padding: 50px;
+}
+
+#edit-content{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+#posts-container{
+    height: fit-content;
+}
+
+.post-container{
+    width: 100%;
+    height: fit-content;
+    border: 1px solid lightgray;
+    margin-top: 30px;
+}
+
+.post-title-container{
+    color: gray;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 25px;
+    position: relative;
+}
+
+.post-title-container::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background-color: grey;
+}
+
+.post-content-container{
+    padding: 20px;
+}
+
+.open-comments, .close-comments{
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid rgb(36, 205, 247);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.open-comments:hover, .close-comments:hover{
+    color: rgb(36, 205, 247);
+    background-color: white;
+}
+
+.add-comment{
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid rgb(45, 201, 87);
+    background-color: rgb(48, 215, 92);
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+    width: fit-content;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}   
+
+.add-comment:hover{
+    color:rgb(48, 215, 92);
+    background-color: white;
+}
+
+.post-columns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-left-column{
+    text-align: left;
+    flex: 1;
+}
+
+.post-right-column{
+    text-align: right;
+}
+
+.post-right-column > p{
+    font-size: 13px;
+    margin: 0px;
+}
+
+.post-editor{
+    display: flex;
+    align-items: center;
+}
+
+.comments-container{
+    padding: 0px 20px 20px 20px;
+}
+
+.comment{
+    border: 1px solid lightgrey;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.comment-username{
+    background-color: grey;
+    color:white;
+    height: 32px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-comment{
+    background-color: indianred;
+    border: 1px solid indianred;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    height: 32px;
+    width: 32px;
+}
+
+.delete-comment:hover{
+    background-color: white;
+    color: indianred;
+    border: 1px solid indianred;
+}
+
+.comment-content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.comment-footer{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+    font-size: 13px;
+    text-align: right;
+}
+
+.publish-post{
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.publish-post:hover{
+    background-color: white;
+    color: black;
+}
+
+.edit-post{
+    background-color: rgb(31, 168, 202);
+    border: 1px solid rgb(31, 168, 202);
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-post:hover{
+    background-color: white;
+    color: rgb(31, 168, 202);
+}
+
+.delete-post{
+    background-color: indianred;
+    border: 1px solid indianred;
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.delete-post:hover{
+    background-color: white;
+    color: indianred;
+}
+
+.tooltip-container{
+    position: relative;
+}
+
+.tooltip-text{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.tooltip-container:hover .tooltip-text,
+.tooltip-container:focus-visible .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.swal2-confirm {
+    color: white !important;
+}
+
+.swal2-cancel {
+    color: white !important;
+}
+
+.login-container{
+    width: 500px;
+    height: 400px;
+}
+
+.edit-title-input{
+    width: 500px;
+}
+
+.edit-content-input{
+    width: 100%;
+    height: 200px;
+}
+
+#submit-content-button{
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#add-comment-modal{
+    width: 500px;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#modal-content{
+    padding: 25px;
+    padding-top: 0px;
+}
+
+#modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.comment-content-input{
+    height: 100px;
+    width: 420px;
+}
+
+#comment-char-counter{
+    margin-left: 10px;
+}
+
+.post-char-counter{
+    margin-left: 10px;
+}
+
+.post-content-input{
+    height: 100px;
+    width: 505px;
+}
+
+.fa-lock{
+    margin-right: 15px;
+}
+
+.margin-left{
+    margin-left:20px;
+}
+
+.post-content-block{
+    white-space: pre-wrap;
+}
+
+.form-error{
+    color: red;
+    margin-top: 5px;
+    font-size: 13px;
+    height: 20px;
+    height: fit-content;
+}
+
+.create-post-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create-post-btn > button{
+    margin: unset !important;
+}
+
+.char-counter{
+    font-size: 13px;
+}
+
+#sign-up-link{
+    text-align: end;
+    font-size: 14px;
+    margin-top: 18px;
+    color: rgb(31, 149, 179);
+    cursor: pointer;
+}
+
+#log-out-container{
+    text-align: right;
+}
