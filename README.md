@@ -13,7 +13,7 @@ Functionalities:
 - Everyone: Log in
 - The API returns status codes and messages that the React application handles to display appropriate notifications and feedback, like being automatically logged out after an hour (when the JWT expires)
 - Access control: Although unauthorized options are not visible to regular users, the API independently validates permissions. Any unauthorized action returns an error and is never executed.
-- For example, using Postman won't get you anywhere.
+- For example, using Postman won't get you anywhere without the token you need credentials to get, and then will only let you perform the actions your admin status offers.
 
 Technologies used in NodeJS API:
 - .env with database, jwt secret, a lot of google credentials
@@ -21,41 +21,47 @@ Technologies used in NodeJS API:
 - CORS
 - JWT
 - Passport.js
-- Google CLoud, Google API and OAuth2Client from google-auth-library
+- bcryptjs
+- Google Cloud, Google API and OAuth2Client from google-auth-library
+- Postgres
 
 Technologies used in React APP
+- Stores the JWT and user-related information locally. Although users can modify this information (through LocalStorage if they know how), it does not grant additional permissions, since the API independently validates authentication and authorization on every protected request.
+- Importing Sweetalert2
+- Route: To manage urls
+- Navigate: A client that is not logged in can't enter. A client that is logged in can't go outside (login page, for example) without logging out.
+- useState
+- useRef
+- useEffect
+- useNavigate
+- useParams
+- BrowserRouter, Routes, Route
+- Fetch requests
+- LocalStorage
+- Handling of forms
 
+<p>Logging in as admin, posting and publishing a post.</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif1.gif" width="500" />
 
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif1.gif" width="500" />
-</p>
+<p>Editing and deleting a post</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif2.gif" width="500" />
 
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif2.gif" width="500" />
-</p>
+<p>Signing up with a new account</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif3.gif" width="500" />
 
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif3.gif" width="500" />
-</p>
+<p>Using this account to post a comment and then deleting it</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif4.gif" width="500" />
 
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/gif4.gif" width="500" />
-</p>
+<p>Email sent after a post was published:</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/mail.png?w=2048" width="500" />
 
-Email sent after a post was published:
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/mail.png?w=2048" width="500" />
-</p>
+<p>Validations:</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/validation1.png" width="500" />
 
-Validations:
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/validation1.png" width="500" />
-</p>
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/validation2.png" width="500" />
-</p>
-<p align="center">
-  <img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/validation3.png" width="500" />
-</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/validation2.png" width="500" />
 
-The alert that kicks you out!
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/validation3.png" width="500" />
+
+<p>The alert that kicks you out!</p>
+<img src="https://andieatwork.wordpress.com/wp-content/uploads/2026/11/expired.png" width="500" />
+
